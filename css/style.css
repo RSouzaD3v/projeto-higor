@@ -287,6 +287,14 @@ main .container .banner1 img{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-left: -100px;
+    opacity: 0;
+}
+
+.active-contact{
+    margin-left: 0px;
+    opacity: 1 !important;
+    transition: 1s ease-in-out;
 }
 
 .contact .container{

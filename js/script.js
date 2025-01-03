@@ -6,24 +6,33 @@ window.addEventListener('load', () => {
     mainText.addEventListener('animationend', () => {
         mainText.classList.add('animation-text-permanent');
     });
+
+    // Configuração do Intersection Observer
+    const options = {
+        root: null, // Observa o viewport inteiro
+        threshold: 0.2, // Quando 20% do elemento estiver visível
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const target = entry.target;
+
+                // Adiciona classes com base nos elementos observados
+                if (target.classList.contains('banner2')) {
+                    target.classList.add('active-banner2');
+                } else if (target.classList.contains('banner3')) {
+                    target.classList.add('active-banner3');
+                } else if (target.classList.contains('banner-beers')) {
+                    target.style.opacity = 1;
+                } else if (target.classList.contains('contact')) {
+                    target.classList.add('active-contact');
+                }
+            }
+        });
+    }, options);
+
+    // Seleciona e observa os elementos
+    const banners = document.querySelectorAll('.banner2, .banner3, .banner-beers, .contact');
+    banners.forEach((banner) => observer.observe(banner));
 });
-
-window.addEventListener('scroll', () => {
-    let sy = window.scrollY;
-
-    console.log(sy);
-    if(sy > 40) {
-        const banner1 = document.querySelector('.banner2');
-        banner1.classList.add('active-banner2');
-    }
-
-    if(sy > 450) {
-        const banner3 = document.querySelector('.banner3');
-        banner3.classList.add('active-banner3');
-    }
-
-    if(sy > 1300){
-        const bannerBeers = document.querySelector('.banner-beers');
-        bannerBeers.style.opacity = 1;
-    }
-})
