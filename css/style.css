@@ -237,4 +237,28 @@ main .container .banner1 img{
     text-align: center;
     margin: 20px 0;
 }
+.fale-conosco div > button{
+    margin-top: 15px;
+    background-color: red;
+    padding: 15px 45px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+}
+.fale-conosco a{
+    text-decoration: none;
+    color: white;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+footer .container{
+    text-align: center;
+}
 
