@@ -4,11 +4,17 @@
     box-sizing: border-box;
 }
 
+:root{
+    --font-main: 40px;
+    --font-secondary: 35px;
+    --font-min: 20px
+}
+
 body{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .container{
@@ -189,3 +195,46 @@ main .container .banner1 img{
 .banner3-text{
     max-width: 500px;
 }
+
+/* Banner Beers */
+.banner-beers{
+    width: 100%;
+}
+
+.banner-beers img{
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Contact */
+.contact{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact .container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact .container > div {
+    max-width: 600px;
+}
+
+.contact .container > div h1{
+    margin: 15px 0;
+    font-size: var(--font-main);
+}
+.contact .container > div p{
+    font-size: var(--font-min);
+}
+.fale-conosco{
+    text-align: center;
+    margin: 20px 0;
+}
+
