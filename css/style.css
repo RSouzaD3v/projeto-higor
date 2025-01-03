@@ -4,10 +4,65 @@
     box-sizing: border-box;
 }
 
+.whatsaap{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(8, 189, 47);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    box-shadow: 0px 0px 0px 0px rgb(8, 189, 47);
+    animation: animZap 2s infinite ease-in-out;
+}
+
+@keyframes animZap {
+    0%{
+        box-shadow: 0px 0px 0px 5px rgb(8, 189, 47);
+    }100%{
+        box-shadow: 0px 0px 0px 15px transparent;
+    }
+}
+
+.whatsaap img{
+    width: 40px;
+}
+
+/* Estilizando a barra de rolagem */
+::-webkit-scrollbar {
+    width: 10px; /* Largura da barra de rolagem */
+  }
+  
+  /* Parte do "track" da barra de rolagem */
+  ::-webkit-scrollbar-track {
+    background: white; /* Cor do fundo */
+    border-radius: 10px;
+  }
+  
+  /* Parte do "thumb" (a barra que você movimenta) */
+  ::-webkit-scrollbar-thumb {
+    background-color: #ff7b00; /* Amarelo */
+    border-radius: 10px;
+    border: 2px solid #f4f4f4; /* Para criar um contorno */
+  }
+  
+  /* Opcional: Estilizar ao passar o mouse */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #ffc107; /* Tom de amarelo mais escuro */
+  }
+  
+
 :root{
     --font-main: 40px;
     --font-secondary: 35px;
     --font-min: 20px
+}
+
+html, body{
+    scroll-behavior: smooth;
 }
 
 body{
@@ -84,16 +139,17 @@ main .container{
     align-items: center;
     flex-direction: column;
     color: white;
+    opacity: 0;
 }
 
 main .container h1{
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 80px;
     font-weight: bold;
 }
 main .container h3{
     font-size: 28px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 main .container .banner1{
@@ -115,6 +171,13 @@ main .container .banner1 img{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    opacity: 0;
+    margin-left: -100px;
+}
+.active-banner2{
+    margin-left: 0px;
+    opacity: 1 !important;
+    transition: 1s ease-in-out;
 }
 
 .banner2 .container{
@@ -161,6 +224,13 @@ main .container .banner1 img{
     align-items: center;
     flex-direction: column;
     margin: 30px 0;
+    opacity: 0;
+    margin-left: -100px;
+}
+.active-banner3{
+    margin-left: 0px;
+    opacity: 1 !important;
+    transition: 1s ease-in-out;
 }
 
 .banner3 .container{
@@ -200,6 +270,8 @@ main .container .banner1 img{
 /* Banner Beers */
 .banner-beers{
     width: 100%;
+    opacity: 0;
+    transition: 1s ease-in-out;
 }
 
 .banner-beers img{
