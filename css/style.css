@@ -325,17 +325,14 @@ main .container .banner1 img{
     text-align: center;
     margin: 20px 0;
 }
-.fale-conosco div > button{
+.fale-conosco div a > button{
     margin-top: 15px;
     background-color: red;
     padding: 15px 45px;
     border-radius: 5px;
     color: white;
     border: none;
-}
-.fale-conosco a{
-    text-decoration: none;
-    color: white;
+    cursor: pointer;
 }
 
 footer{
