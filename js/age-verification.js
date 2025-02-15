@@ -1,4 +1,3 @@
-/*
 document.addEventListener("DOMContentLoaded", function () {
     const ageModal = document.getElementById("age-modal");
     const confirmAge = document.getElementById("confirm-age");
@@ -32,5 +31,3 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = "https://www.jusbrasil.com.br/artigos/a-criminalizacao-do-fornecimento-de-bebidas-alcoolicas-a-menores-de-18-anos/169306418"; // Redireciona para outra página
     });
 });
-
-*/
