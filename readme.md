@@ -31,3 +31,4 @@ Este repositório contém o código-fonte de uma landing page simples para a **D
 - HTML5: Estrutura do conteúdo.
 - CSS3: Estilização da página e design responsivo.
 - JavaScript: Adição de funcionalidades dinâmicas.
+--
